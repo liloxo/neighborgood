@@ -6,13 +6,23 @@ import 'package:neighborgood/features/homepage/controller/cubit/homepage_state.d
 import 'package:neighborgood/features/homepage/view/widget/post_card.dart';
 import 'package:neighborgood/features/homepage/view/widget/top_row.dart';
 
-class HomepageView extends StatelessWidget {
+class HomepageView extends StatefulWidget {
   const HomepageView({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    context.read<HomePageCubit>().getPosts();
+  State<HomepageView> createState() => _HomepageViewState();
+}
 
+class _HomepageViewState extends State<HomepageView> {
+  @override
+  void initState() {
+    super.initState();
+    final homeCubit = BlocProvider.of<HomePageCubit>(context);
+    homeCubit.getPosts();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: [
         const TopRow(),
@@ -31,7 +41,7 @@ class HomepageView extends StatelessWidget {
                   separatorBuilder: (context, index) => SizedBox(height: 30.h),
                   itemCount: posts.length,
                   itemBuilder: (context, i) {
-                    return PostCard(postModel: posts[i]); // Display each post
+                    return PostCard(postModel: posts[i]);
                   },
                 );
               }

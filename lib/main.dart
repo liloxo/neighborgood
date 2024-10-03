@@ -6,6 +6,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:neighborgood/features/authentication/login/view/login_page.dart';
 import 'package:neighborgood/features/home/view/home.dart';
+import 'package:neighborgood/features/homepage/controller/cubit/homepage_cubit.dart';
+import 'package:neighborgood/features/homepage/model/source/get_posts.dart';
 import 'package:neighborgood/firebase_options.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -38,6 +40,8 @@ class MyApp extends StatelessWidget {
               RepositoryProvider(
                 create: (context) => AuthenticationRepository(),
               ),
+              BlocProvider(
+                  create: (_) => HomePageCubit(postService: PostService()))
             ],
             child: MaterialApp(
                 debugShowCheckedModeBanner: false,

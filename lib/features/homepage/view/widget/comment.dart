@@ -18,18 +18,14 @@ class Comment extends StatelessWidget {
             width: 24.w,
             height: 24.h,
             child: const UserImage()),
-        SizedBox(
-          width: 280.w,
-          height: 20.h,
-          child: TextField(
-            decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 10.w),
-              border: InputBorder.none,
-              hintText: 'Add a comment',
-              hintStyle: Textstyles.singlelineExtraSmall,
-            ),
-          ),
-        )
+        Container(
+            padding: EdgeInsets.only(top: 4.h),
+            width: 280.w,
+            height: 20.h,
+            child: Text(
+              'Add a comment',
+              style: Textstyles.singlelineExtraSmall,
+            ))
       ],
     );
   }

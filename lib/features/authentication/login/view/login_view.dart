@@ -18,7 +18,7 @@ import 'package:neighborgood/features/authentication/login/view/widget/my_form.d
 import 'package:neighborgood/features/authentication/login/view/widget/other_methods.dart';
 import 'package:neighborgood/features/authentication/login/view/widget/sign_up_here.dart';
 import 'package:neighborgood/features/authentication/login/view/widget/welcome.dart';
-import 'package:neighborgood/features/homepage/view/homepage_view.dart';
+import 'package:neighborgood/features/home/view/home.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -125,7 +125,7 @@ class _LoginViewState extends State<LoginView> {
                   Navigator.push(
                     context,
                     MaterialPageRoute<void>(
-                      builder: (_) => const HomepageView(),
+                      builder: (_) => const Home(),
                     ),
                   );
                   showSnackbar(context, 'login success');
