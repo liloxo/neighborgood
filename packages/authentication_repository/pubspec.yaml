@@ -1,0 +1,21 @@
+name: authentication_repository
+description: A new Flutter package project.
+version: 0.0.1
+homepage: jns
+
+environment:
+  sdk: ">=3.1.1 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  cloud_firestore: ^5.4.3
+  firebase_auth: ^5.3.1
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^3.0.1
+  flutter_test:
+    sdk: flutter
+
+flutter: null

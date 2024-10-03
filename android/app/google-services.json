@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "434549617938",
+    "project_id": "neighborgood-1e405",
+    "storage_bucket": "neighborgood-1e405.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434549617938:android:066000b2b303f054b7efcb",
+        "android_client_info": {
+          "package_name": "com.example.neighborgood"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD10C5D-faB8ZO9dK6MLS9IfwoRoBaMuR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
