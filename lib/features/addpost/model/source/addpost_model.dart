@@ -41,7 +41,7 @@ class AddPostService {
         postImage: imageUrl ?? '',
       );
       var data = await _firestore.collection('users').doc(post.posterId).get();
-      int postsCount = data.data()?['posts'];
+      int postsCount = data.data()?['posts'] ?? 0;
       int newcount = postsCount + 1;
       await _firestore.collection('posts').add(newPost.toJson());
 
